@@ -1,0 +1,1 @@
+Latest nordic sdk with arm support (allows teensy and other arm boards to work with nrf8001)
