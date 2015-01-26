@@ -119,12 +119,12 @@ bool aci_queue_is_empty(aci_queue_t *aci_q)
   ble_assert(NULL != aci_q);
 
   //Critical section
-  noInterrupts();
+  // noInterrupts();
   if (aci_q->head == aci_q->tail)
   {
     state = true;
   }
-  interrupts();
+  // interrupts();
 
   return state;
 }
@@ -143,11 +143,11 @@ bool aci_queue_is_full(aci_queue_t *aci_q)
   ble_assert(NULL != aci_q);
 
   //This should be done in a critical section
-  noInterrupts();
+  // noInterrupts();
   
   state = (aci_q->tail == aci_q->head + ACI_QUEUE_SIZE);
 
-  interrupts();
+  // interrupts();
   //end
 
   return state;
